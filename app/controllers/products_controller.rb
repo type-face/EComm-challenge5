@@ -6,13 +6,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-
-
-    first_product = Product.create(title: 'Product1', description: '1st product', price: 5.5, stock_quantity: 1)
-    second_product = Product.create(title: 'Product2', description: '2nd product', price: 6.6, stock_quantity: 2)
-    third_product = Product.create(title: 'Product3', description: '3rd product', price: 7.7, stock_quantity: 3)
-    fourth_product = Product.create(title: 'Product4', description: '4th product', price: 8.8, stock_quantity: 4)
-    fifth_product = Product.create(title: 'Product5', description: '5th product', price: 9.9, stock_quantity: 5)
     
   end
 
@@ -82,3 +75,9 @@ class ProductsController < ApplicationController
     end
 
 end
+
+    Product.create(title: 'Product1', description: '1st product', price: 5.5, stock_quantity: 1)
+    Product.create(title: 'Product2', description: '2nd product', price: 6.6, stock_quantity: 2)
+    Product.create(title: 'Product3', description: '3rd product', price: 7.7, stock_quantity: 3)
+    Product.create(title: 'Product4', description: '4th product', price: 8.8, stock_quantity: 4)
+    Product.create(title: 'Product5', description: '5th product', price: 9.9, stock_quantity: 5)

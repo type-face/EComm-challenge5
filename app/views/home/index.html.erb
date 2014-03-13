@@ -1,6 +1,19 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
-<% 100.times{ %>
+
+<%
+    Product.create(title: 'Product1', description: '1st product', price: 5.5, stock_quantity: 1)
+    Product.create(title: 'Product2', description: '2nd product', price: 6.6, stock_quantity: 2)
+    Product.create(title: 'Product3', description: '3rd product', price: 7.7, stock_quantity: 3)
+    Product.create(title: 'Product4', description: '4th product', price: 8.8, stock_quantity: 4)
+    Product.create(title: 'Product5', description: '5th product', price: 9.9, stock_quantity: 5)
+%>
+
+<p>Average: <%= Product.average("price") %></p>
+<p>Max. price: <%= Product.maximum("price") %></p>
+<p>Number of products: <%= Product.count %></p>
+<p>Total stock: <%= Product.sum("stock_quantity") %></p>
+<% 100.times do %>
 	<p> Chunky Bacon</p> 
-<%}%>
+<%end%>
 
